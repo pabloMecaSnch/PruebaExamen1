@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+ <form [formGroup] = "formulario" (ngSubmit)="onSubmit(formulario.values)">
+   <div fromGroupName = "validador">
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input type="text" formControlName="nombre"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="text" formControlName="contrasena"></ion-input>
+    </ion-item> 
+  </div>
+   <ion-button color="primary" class="submit-btn" expand="block" type="submit" [disabled]="!formulario.valid">Enviar formulario</ion-button>
+ </form>
+</ion-content>
