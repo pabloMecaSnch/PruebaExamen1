@@ -8,7 +8,7 @@
 
 <ion-content [fullscreen]="true">
  <form [formGroup] = "formulario" (ngSubmit)="onSubmit(formulario.values)">
-   <div fromGroupName = "validador">
+   <div formGroupName = "validador">
     <ion-item>
       <ion-label position="floating">Nombre</ion-label>
       <ion-input type="text" formControlName="nombre"></ion-input>
