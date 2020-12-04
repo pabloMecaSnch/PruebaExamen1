@@ -49,7 +49,7 @@ export class HomePage {
       var nUsuario:string = nombre.value;
       var enc = false;
       console.log(this.getPrueba());
-      /*this.usuarios.forEach(element => {
+      this.usuarios.forEach(element => {
         console.log("entro al bucle");
         
         if(element.usuario == nombre.value){
@@ -64,7 +64,7 @@ export class HomePage {
         }else{
           return (null);
         }
-        */
+      
        return null;
     }
 
@@ -101,6 +101,7 @@ export class HomePage {
 
       this.validador = new FormGroup({
         nombre : new FormControl('',Validators.compose([
+          this.validUsername.bind(this),
           Validators.required,
           Validators.minLength(3),
           
